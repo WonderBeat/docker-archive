@@ -1,0 +1,27 @@
+$TTL 10
+$ORIGIN tapcat.
+
+@ IN SOA        ns1.tapcat hostmaster.tapcat. (
+                    2014040901 ; Serial
+                    2h ; Refresh
+                    1h ; Retry
+                    1w ; Expire
+                    2h ; Negative Cache TTL
+)
+
+@               IN      NS      ns1.    ; Master
+
+ns1.tapcat.             IN       A       10.8.0.18
+muaddib.tapcat.         IN       A       10.8.0.18
+omnius.tapcat.          IN       A       188.226.216.31
+
+mesos.tapcat.                 IN      CNAME   muaddib.tapcat.
+tr.tapcat.                    IN      CNAME   omnius.tapcat.
+tower.tapcat.                 IN      CNAME   omnius.tapcat.
+repository.tapcat.            IN      CNAME   muaddib.tapcat.
+registry.tapcat.              IN      CNAME   muaddib.tapcat.
+docker.registry.tapcat.       IN      CNAME   muaddib.tapcat.
+tower.tapcat.                 IN      CNAME
+monitoring.tapcat.            IN      CNAME   omnius.tapcat.
+mon.tapcat.                   IN      CNAME   omnius.tapcat.
+teamcity.tapcat.              IN      CNAME   omnius.tapcat.
